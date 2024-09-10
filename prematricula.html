@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prematrícula</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="prematricula.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-4">
+        <h2 class="text-center">Prematrícula</h2>
+        <div id="studentInfo" class="mb-4"></div>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Cursos Disponibles</h4>
+                <ul id="courseList" class="list-group">
+                    <!-- Los cursos disponibles se cargarán aquí -->
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h4>Cursos Prematriculados</h4>
+                <ul id="enrolledCourses" class="list-group">
+                    <!-- Los cursos prematriculados se cargarán aquí -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para seleccionar horario -->
+    <div class="modal fade" id="horarioModal" tabindex="-1" role="dialog" aria-labelledby="horarioModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="horarioModalLabel">Seleccionar Horario</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="horarioForm">
+                        <div class="form-group">
+                            <label for="horarioSelect">Seleccione el horario:</label>
+                            <select class="form-control" id="horarioSelect" required>
+                                <option value="">Seleccione...</option>
+                                <option value="Mañana">Mañana</option>
+                                <option value="Tarde">Tarde</option>
+                                <option value="Noche">Noche</option>
+                            </select>
+                        </div>
+                        <input type="hidden" id="courseToInclude" value="">
+                        <button type="submit" class="btn btn-primary">Incluir Curso</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="prematricula.js"></script>
+</body>
+</html>
