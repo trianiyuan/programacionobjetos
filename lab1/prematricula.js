@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const courses = ['Matemáticas', 'Historia', 'Programación', 'Química', 'Física'];
+    const courses = ['Base de Datos', 'Diseño Web', 'Programación', 'Fundamentos de Programación', 'Ciberseguridad'];
     const enrolledCourses = JSON.parse(localStorage.getItem('enrolledCourses')) || [];
 
     // Recuperar los datos del localStorage
