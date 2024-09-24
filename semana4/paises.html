@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información del País</title>
+    <link rel="stylesheet" href="paises.css">
+</head>
+<body>
+    <div class="container">
+        <h1>
+            Información del País
+            <img src="paises.png" alt="Características del País" class="header-image">
+        </h1>
+
+        <!-- Nombre y descripción del país -->
+        <div class="input-group">
+            <label for="countryName">Nombre del País:</label>
+            <input type="text" id="countryName" placeholder="Introduce el nombre del país">
+        </div>
+
+        <div class="input-group">
+            <label for="countryDescription">Descripción del País:</label>
+            <textarea id="countryDescription" rows="4" placeholder="Introduce la descripción del país"></textarea>
+        </div>
+
+        <!-- Sección de características -->
+        <h2>Características</h2>
+
+        <div class="input-group">
+            <label for="charName">Nombre de la Característica:</label>
+            <input type="text" id="charName" placeholder="Introduce el nombre de la característica">
+        </div>
+
+        <div class="input-group">
+            <label for="charDescription">Descripción de la Característica:</label>
+            <textarea id="charDescription" rows="3" placeholder="Introduce la descripción de la característica"></textarea>
+        </div>
+
+        <button id="addCharButton">Añadir Característica</button>
+
+        <!-- Tabla para las características -->
+        <table id="charTable">
+            <thead>
+                <tr>
+                    <th>Nombre de la Característica</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas se agregarán aquí -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="paises.js"></script>
+</body>
+</html>

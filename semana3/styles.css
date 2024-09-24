@@ -1,0 +1,44 @@
+body {
+    background-color: #f5f5dc; /* Color de fondo crema suave */
+    font-family: 'Arial', sans-serif; /* Tipografía elegante */
+}
+
+.card {
+    background-color: #fff5e1; /* Fondo crema para la tarjeta */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    padding: 30px; /* Espaciado interno */
+    margin-top: 50px; /* Margen superior */
+}
+
+h1 {
+    font-size: 1.8rem; /* Tamaño de fuente más grande */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    color: #6f4c3e; /* Color café para el texto */
+}
+
+.img-fluid {
+    margin-bottom: 20px; /* Espacio debajo de la imagen */
+}
+
+.form-group label {
+    font-weight: bold; /* Etiquetas en negrita */
+    color: #8b4513; /* Color café para el texto de las etiquetas */
+}
+
+.btn {
+    background-color: #c2b280; /* Color de fondo del botón crema */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+    color: #fff; /* Color del texto del botón */
+}
+
+.btn:hover {
+    background-color: #a69a6b; /* Color más oscuro al pasar el ratón */
+}
+
+.form-check-label {
+    margin-left: 5px; /* Espacio para la etiqueta del checkbox */
+}
+
