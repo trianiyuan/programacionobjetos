@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Mascotas - Clínica Veterinaria</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label, input, select, button {
+            margin-bottom: 10px;
+        }
+        #lista-mascotas {
+            margin-top: 20px;
+        }
+        .mascota-item {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .mascota-item img {
+            max-width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Mascotas</h1>
+        <form id="form-mascota">
+            <label for="nombre">Nombre de la Mascota:</label>
+            <input type="text" id="nombre" required>
+
+            <label for="tipo">Tipo de Mascota:</label>
+            <select id="tipo" required>
+                <option value="Perro">Perro</option>
+                <option value="Gato">Gato</option>
+                <option value="Cerdo">Cerdo</option>
+                <option value="Caballo">Caballo</option>
+            </select>
+
+            <label for="edad">Edad de la Mascota:</label>
+            <input type="number" id="edad" required>
+
+            <label for="raza">Raza de la Mascota:</label>
+            <input type="text" id="raza" required>
+
+            <label for="foto">Foto de la Mascota:</label>
+            <input type="file" id="foto" accept="image/*" required>
+
+            <button type="submit">Registrar Mascota</button>
+        </form>
+
+        <div id="lista-mascotas">
+            <h2>Lista de Mascotas Registradas</h2>
+            <div id="mascotas-container"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de  Países</title>
+    <link rel="stylesheet" href="paises.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Nombres de Países</h1>
+
+        <!-- Barra de Búsqueda -->
+        <div class="form-group">
+            <input type="text" id="search-bar" placeholder="Buscar país por nombre...">
+            <button>Buscar País</button>
+        </div>
+
+        <!-- Botón para Agregar Nuevo País -->
+        <div class="form-group">
+            <button onclick="window.location.href=''">Agregar Nuevo País</button>
+        </div>
+
+        <!-- Tabla para Mostrar Nombres de Países -->
+        <table id="country-names-table">
+            <thead>
+                <tr>
+                    <th>Nombre del País</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Se llena dinámicamente con JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="searchCountry.js"></script>
+    <script src="populateCountryNames.js"></script>
+    <script src="paises.js"></script>
+
+</body>
+</html>

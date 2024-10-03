@@ -1,11 +1,24 @@
 // Tomamos las instancias del botón
 const addCountryCharBtn = document.getElementById('addCharButton');
+const addCountryBtn = document.getElementById('addCountryButton');
 //arreglo que va a ir guardando las caracteristicas
 const characArray= [];
 //se va a definir el handler del botón, el handler escuchara cada vez que se le de click al boton
+const addCountryHandler = () => {
+    //tomar el valor del nombre y la descripcion del pais
+    let countryName = document.getElementById('countryName').value;
+    let countryDesc  = document.getElementById('countryDescription').value;
+    let country = {
+        countryName,
+        countryDesc,
+        characteristic: characArray
+    };
+    console.log(country);
+
+};
 const addCountryCharHandler = () => {//se va a definir el handler del botón, el handler escuchara cada vez que se le de click al boton
 
-    // Tomar los valores del formulario
+    // Tomar los valores de nombre y descripcion de la caracteristica
     let nameValue = document.getElementById('charName').value;
     let description = document.getElementById('charDescription').value;
 
@@ -38,29 +51,32 @@ const addCountryCharHandler = () => {//se va a definir el handler del botón, el
 };
 
 //agregar a la tabla de caracteristicas cada caracteristica
-const showCharacteristics = () =>{
-    //.tomar la tabla
+const showCharacteristics = () => {
+    // Tomar la tabla y limpiar las filas antes de agregar nuevas
     const charTable = document.getElementById('charTable').getElementsByTagName('tbody')[0];
+    charTable.innerHTML = ''; // Limpiar la tabla antes de agregar nuevas filas, no duplica la información
+
+    // Recorrer el arreglo de características y agregar cada fila de nuevo
     characArray.forEach((c) => {
         const charRow = charTable.insertRow();
-        //nombre.
+        
+        // Nombre de la característica
         const nameCell = charRow.insertCell(0);
-        //recorremos la coleccion key-values, y vamos a pedir el property que no sea la descripcion
         for (const key in c) {
             if (key !== 'description') {
                 nameCell.textContent = key;
             }
         }
-        //descripcion. se guarda la informacion 
+
+        // Descripción de la característica
         const descriptionCell = charRow.insertCell(1);
-        descriptionCell.textContent = c.description
+        descriptionCell.textContent = c.description;
     });
-    //recorrer el arreglo
-    //delcara la fila y la celda
-}
-    
+};
+
+
 
 // Asignar el handler al botón, asociar el evento al boton
 addCountryCharBtn.addEventListener('click', addCountryCharHandler);
-
+addCountryBtn.addEventListener('click', addCountryHandler);
 
