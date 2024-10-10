@@ -27,7 +27,7 @@
     <label for="departureDate">Fecha de Salida</label>
     <input type="date" id="departureDate" required>
 
-    <label for="returnDate">Fecha de Ingreso</label>
+    <label for="returnDate">Fecha de Regreso</label>
     <input type="date" id="returnDate" required>
 
     <label for="numPassengers">Número de Pasajeros</label>
@@ -41,11 +41,11 @@
     <input type="submit" value="Guardar Reserva">
 </form>
 
-
 <!-- Tabla de reservas -->
 <table>
     <thead>
         <tr>
+            <th>Número de Reserva</th>
             <th>Aeropuerto de Salida</th>
             <th>Aeropuerto de Destino</th>
             <th>Fecha de Salida</th>
@@ -56,7 +56,7 @@
         </tr>
     </thead>
     <tbody id="reservationList">
-        <!-- Las reservas se mostrarán aquí -->
+        
     </tbody>
 </table>
 <br><br><br><br>

@@ -24,7 +24,7 @@ function loadSelectors() {
     const destinationAirportSelect = document.getElementById('destinationAirport');
     const flightClassSelect = document.getElementById('flightClass');
 
-    //Aeropuertos de Salida
+    // Aeropuertos de Salida
     departureAirports.forEach(airport => {
         const option = document.createElement('option');
         option.value = airport;
@@ -32,7 +32,7 @@ function loadSelectors() {
         departureAirportSelect.appendChild(option);
     });
 
-    //Aeropuertos de Destino
+    // Aeropuertos de Destino
     destinationAirports.forEach(airport => {
         const option = document.createElement('option');
         option.value = airport;
@@ -40,7 +40,7 @@ function loadSelectors() {
         destinationAirportSelect.appendChild(option);
     });
 
-    //Clase de Vuelo
+    // Clase de Vuelo
     flightClasses.forEach(flightClass => {
         const option = document.createElement('option');
         option.value = flightClass;
@@ -49,13 +49,13 @@ function loadSelectors() {
     });
 }
 
-// obtener dle localstorage con.parse
+// Obtener del localstorage
 function getReservations() {
     let reservations = localStorage.getItem('reservations');
     return reservations ? JSON.parse(reservations) : [];
 }
 
-// guardar en LS
+// Guardar en localStorage
 function saveReservations(reservations) {
     localStorage.setItem('reservations', JSON.stringify(reservations));
 }
@@ -63,17 +63,18 @@ function saveReservations(reservations) {
 // Eliminar de la tabla
 function removeReservation(index) {
     let reservations = getReservations();
-    reservations.splice(index, 1); // Eliminar la reserva en la posición 'index'
-    saveReservations(reservations); // Guardar la lista actualizada
-    loadReservations(); // Recargar la tabla
+    reservations.splice(index, 1); 
+    saveReservations(reservations);
+    loadReservations(); 
 }
 
-// Agregar reservación a la tabla
+// Agregar reserva a la tabla
 function addReservationToTable(reservation, index) {
     const reservationList = document.getElementById('reservationList');
     const row = document.createElement('tr');
 
     row.innerHTML = `
+        <td>${index + 1}</td> <!-- Mostrar número de reserva -->
         <td>${reservation.departureAirport}</td>
         <td>${reservation.destinationAirport}</td>
         <td>${reservation.departureDate}</td>
@@ -112,10 +113,12 @@ document.getElementById('reservationForm').addEventListener('submit', function(e
     const numPassengers = document.getElementById('numPassengers').value;
     const flightClass = document.getElementById('flightClass').value;
 
+    // Validar que la fecha de regreso no sea anterior a la fecha de salida
     if (returnDate < departureDate) {
         alert('La fecha de regreso no puede ser anterior a la fecha de salida.');
         return; 
-        }
+    }
+
     // Crear un objeto de reserva
     const newReservation = {
         departureAirport,
