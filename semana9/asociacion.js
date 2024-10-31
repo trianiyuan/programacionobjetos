@@ -34,3 +34,6 @@ class Computadora{
 
 tmpEmp = new Empleado ('Hugo',10101);
 console.log(tmpEmp.toString());
+tmpPc = new Computadora('XYZ','Lenovo');
+tmpPC.responsable = tmpEmp;
+console.log(tmpPC.responsable);
