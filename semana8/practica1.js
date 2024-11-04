@@ -49,5 +49,5 @@ class Car{
     }
 }
 
-const myCar = new Car('Toyota', 'Corolla');
+const myCar = new Car('Hyundai', 'Corolla');
 myCar.startEngine();
