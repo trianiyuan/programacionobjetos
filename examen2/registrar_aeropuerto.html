@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Aeropuerto</title>
+    <link rel="stylesheet" href="css accesible.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Salir</a></li>
+            <li><a href="reserva.html">Reservar</a></li>
+            <li><a href="registro.html">Registrar Usuario</a></li>
+            <li><a href="registrar_aeropuerto.html">Registrar Aeropuerto</a></li>
+        </ul>
+    </nav>
+    <h1>Registrar Aeropuerto</h1>
+</header>
+
+<form id="airportForm">
+    <label for="country">País:</label>
+    <input type="text" id="country" required>
+
+    <label for="airportName">Nombre del Aeropuerto:</label>
+    <input type="text" id="airportName" required>
+
+    <label for="airportCode">Código del Aeropuerto:</label>
+    <input type="text" id="airportCode" required>
+
+    <button type="submit">Registrar Aeropuerto</button>
+</form>
+
+
+<script src="registrar_aeropuerto.js"></script>
+
+</body>
+</html>

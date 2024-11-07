@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Usuario</title>
+    <link rel="stylesheet" href="css accesible.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Salir</a></li>
+            <li><a href="reserva.html">Reservar</a></li>
+            <li><a href="registro.html">Registrar Usuario</a></li>
+            <li><a href="registrar_aeropuerto.html">Registrar Aeropuerto</a></li>
+        </ul>
+    </nav>
+    <h1>Registrar Usuario</h1>
+</header>
+
+
+<form id="registerForm">
+    <label for="firstName">Nombre</label>
+    <input type="text" id="firstName" placeholder="Ingresa tu nombre" required>
+
+    <label for="lastName">Apellido</label>
+    <input type="text" id="lastName" placeholder="Ingresa tu apellido" required>
+
+    <label for="email">Correo Electrónico</label>
+    <input type="email" id="email" placeholder="Ingresa tu correo electrónico" required>
+
+    <label for="registerPassword">Contraseña</label>
+    <input type="password" id="registerPassword" placeholder="Ingresa tu contraseña" required>
+
+    <input type="submit" value="Registrar Usuario">
+</form>
+
+<div id="registerMessage" class="message"></div>
+
+<footer>
+    &copy; 2024 Sistema de Reservas de Vuelos
+</footer>
+
+<script src="registro.js"></script>
+</body>
+</html>

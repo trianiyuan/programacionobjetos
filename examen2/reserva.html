@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar Vuelo</title>
+    <link rel="stylesheet" href="css accesible.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Salir</a></li>
+            <li><a href="reserva.html">Reservar</a></li>
+            <li><a href="registro.html">Registrar Usuario</a></li>
+            <li><a href="registrar_aeropuerto.html">Registrar Aeropuerto</a></li>
+        </ul>
+    </nav>
+    <h1>Reservar Vuelo</h1>
+</header>
+
+<form id="reservationForm">
+    <label for="departureAirport">Aeropuerto de Salida:</label>
+    <select id="departureAirport" required>
+    </select>
+
+    <label for="destinationAirport">Aeropuerto de Destino:</label>
+    <select id="destinationAirport" required>
+    </select>
+
+    <label for="departureDate">Fecha de Salida:</label>
+    <input type="date" id="departureDate" required>
+
+    <label for="returnDate">Fecha de Regreso:</label>
+    <input type="date" id="returnDate" required>
+
+    <label for="numPassengers">Número de Pasajeros:</label>
+    <input type="number" id="numPassengers" min="1" required>
+
+    <label for="flightClass">Clase de Vuelo:</label>
+    <select id="flightClass" required>
+        <option value="Primera Clase">Primera Clase</option>
+        <option value="Clase Negocios">Clase Negocios</option>
+        <option value="Económica">Económica</option>
+    </select>
+
+    <button type="submit">Reservar</button>
+</form>
+
+<div id="messageContainer"></div>
+
+
+<table id="reservationList">
+    <thead>
+        <tr>
+            <th>Número</th>
+            <th>Salida</th>
+            <th>Destino</th>
+            <th>Fecha de Salida</th>
+            <th>Fecha de Regreso</th>
+            <th>Pasajeros</th>
+            <th>Clase</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<br><br><br><br>
+
+<script src="reserva.js"></script>
+
+</body>
+</html>

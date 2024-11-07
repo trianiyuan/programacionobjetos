@@ -1,0 +1,290 @@
+/* Estilos */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #004085;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+
+header img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: auto;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+header nav a:focus,
+header nav a:hover {
+    text-decoration: underline;
+}
+
+header nav {
+    text-align: center;
+    background-color: #004085;
+    padding: 15px 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #004085;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+footer a {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+footer a:focus,
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Form Styles */
+form {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 45px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="date"],
+form input[type="time"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form input[type="submit"] {
+    background-color: #004085;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover,
+form input[type="submit"]:focus {
+    background-color: #0056b3;
+    outline: 2px solid #0056b3;
+}
+
+form input[type="submit"]:focus {
+    outline: 3px dashed #ff2f00 !important;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+}
+
+table th, table td {
+    padding: 12px 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #004085;
+    color: white;
+    font-weight: bold;
+}
+
+
+table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Elementos de accessibility */
+a:focus, button:focus, input:focus, select:focus, textarea:focus {
+    outline: 3px dashed #ff2f00;
+    outline-offset: 2px;
+}
+
+input, select, textarea, button {
+    font-size: 18px;
+}
+
+/*Pop up alerts*/
+/* Estilos para los mensajes de error y éxito */
+.message {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Enlace para el mensaje de error o éxito */
+.message a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.message a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el enlace de registro */
+form p {
+    text-align: center;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+form p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+form p a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Estilos para el botón eliminar */
+button.delete-btn {
+    background-color: #dc3545; /* Rojo para denotar acción de eliminar */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button.delete-btn:hover,
+button.delete-btn:focus {
+    background-color: #c82333; /* Color más oscuro al hacer hover o focus */
+    outline: 2px solid #c82333; /* Borde para mejorar accesibilidad */
+}
+
+button.delete-btn:focus {
+    outline: 3px dashed #ffc107; /* Borde accesible al hacer focus */
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Alto contraste para mejorar Accessibility */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    body {
+        background-color: black;
+        color: white;
+    }
+    
+    header, footer {
+        background-color: #fff;
+        color: #000;
+    }
+
+    table th, table td {
+        border-color: white;
+    }
+}
